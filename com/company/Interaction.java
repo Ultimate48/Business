@@ -1,13 +1,13 @@
-package com.company;
+package Business.com.company;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import static com.company.assetShare.*;
-import static com.company.accountControl.*;
-import static com.company.loanControl.*;
-import static com.company.Methods.*;
+import static Business.com.company.assetShare.*;
+import static Business.com.company.accountControl.*;
+import static Business.com.company.loanControl.*;
+import static Business.com.company.Methods.*;
 
 public class Interaction
 {
@@ -172,7 +172,7 @@ public class Interaction
 
     static int accessAccount(String accName)
     {
-        int accNum = Methods.getNumberFromArrayList(accounts, (accName));
+        int accNum = getNumberFromArrayList(accounts, (accName));
         System.out.print("Enter your account password : ");
         int pass = 0;
         try {

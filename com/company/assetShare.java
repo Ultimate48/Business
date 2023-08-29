@@ -1,10 +1,10 @@
-package com.company;
+package Business.com.company;
 
 import java.util.ArrayList;
 
-import static com.company.accountControl.*;
-import static com.company.Interaction.*;
-import static com.company.Methods.*;
+import static Business.com.company.accountControl.*;
+import static Business.com.company.Interaction.*;
+import static Business.com.company.Methods.*;
 
 class Assets extends Object_Head
 {

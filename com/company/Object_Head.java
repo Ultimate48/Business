@@ -1,4 +1,4 @@
-package com.company;
+package Business.com.company;
 
 public class Object_Head {
     public String getName(){

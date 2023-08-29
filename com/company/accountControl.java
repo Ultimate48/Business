@@ -1,7 +1,7 @@
-package com.company;
+package Business.com.company;
 
 import java.util.*;
-import static com.company.Interaction.*;
+import static Business.com.company.Interaction.*;
 
 /**
  *

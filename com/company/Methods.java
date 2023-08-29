@@ -1,8 +1,8 @@
-package com.company;
+package Business.com.company;
 
 import java.util.ArrayList;
-import static com.company.Interaction.Operations;
-import static com.company.accountControl.accounts;
+import static Business.com.company.Interaction.Operations;
+import static Business.com.company.accountControl.accounts;
 
 public class Methods {
     public static double round(double value) {
