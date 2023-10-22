@@ -203,7 +203,6 @@ public class loanControl {
                 addShare(mortgage, loans.get(closedLoans.get(i)).account, m_percent);
             }
             System.out.println("Loan numbered " + loans.get(closedLoans.get(i)).loanNum + "closed");
-            //noinspection SuspiciousMethodCalls
             loans.remove(closedLoans.get(i));
         }
     }
