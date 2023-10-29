@@ -501,6 +501,13 @@ public class Interaction
             Operations();
         }
         getShareOwnerPosition(shareOwner, share);
+
+        assert shareOwner != null;
+        if(shareOwner.equals(name)){
+            System.out.println("You cannot buy shares from yourself");
+            Operations();
+        }
+
         System.out.println("How much percentage of asset you want to buy");
         try {
             shares = sc.nextInt();
@@ -542,14 +549,7 @@ public class Interaction
         try {
             transMoney(accessAccount(name), getNumberFromArrayList(accounts, shareOwner), amount);
         }catch (Exception ignored){}
-        deductShare(share, shareOwner, shares);
-        addShare(share, name, shares);
-
-        int value = ((assets.get(getNumberFromArrayList(assets, share)).getValue() / 100) * (100 - shares)) + amount;
-        assets.get(getNumberFromArrayList(assets, share)).setValue(value);
-
-        System.out.println("Deal successful");
-        Operations();
+        shareDeal(shareOwner, share, name, shares, amount);
     }
 
     static void sellShares()
@@ -600,11 +600,22 @@ public class Interaction
         System.out.println("Please enter your name or account number, anyone who would like to purchase");
         buyer = sc.next();
         getNumberFromArrayList(accounts, buyer);
+
+        assert name != null;
+        if(name.equals(buyer)){
+            System.out.println("You cannot buy shares from yourself");
+            Operations();
+        }
+
         System.out.println("Please " + buyer + ":");
         accessAccount(buyer);
         try {
             transMoney(getNumberFromArrayList(accounts, buyer), getNumberFromArrayList(accounts, name), amount);
         }catch (Exception ignored){}
+        shareDeal(name, share, buyer, shares, amount);
+    }
+
+    private static void shareDeal(String name, String share, String buyer, int shares, int amount) {
         deductShare(share, name, shares);
         addShare(share, buyer, shares);
 

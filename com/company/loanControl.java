@@ -177,7 +177,6 @@ public class loanControl {
     }
 
     static void loanReCalculation(){
-        //Create an arrayList which can hold the loanNumber of the loans closed
         ArrayList<Integer> closedLoans = new ArrayList<>();
         for(int i = 0; i <= loans.size() - 1; i++){
             int compound = (int)(loans.get(i).actualAmount * (loans.get(i).interest/100*12));

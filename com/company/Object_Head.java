@@ -1,6 +1,6 @@
 package Business.com.company;
 
-public class Object_Head {
+public class Object_Head{
     public String getName(){
         return null;
     }
